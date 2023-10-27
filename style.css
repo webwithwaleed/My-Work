@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav{
+    padding: 10px;
+    max-width: 660px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fade-down 1s;
+}
+
+.dp{
+    border-radius: 100%;
+    width: 40px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link{
+    width: 40px;
+}
+
+.title{
+    padding-top: 50px;
+    text-align: center;
+    animation: fade-up 1.3s;
+}
+
+.title h1{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+i{
+    font-weight: 800;
+    background: linear-gradient(45deg,#6f6fdb,#b66df6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.videos{
+    animation: fade-up 1.6s;
+    max-width: 630px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.video{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.vid{
+    width: 200px;
+    height: 355px;
+    border-radius: 15px;
+}
+
+.overlay{
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background: linear-gradient(0deg,#000000,#ffffff00);
+  -webkit-text-fill-color: transparent;
+  pointer-events:none
+}
+
+.footer{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    animation: fade-up 1.9s;
+}
+
+@media only screen and (max-width: 500px) {
+    .video{
+        flex-direction: column;
+    }
+  }
+
+@keyframes fade-down{
+    0%{
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
